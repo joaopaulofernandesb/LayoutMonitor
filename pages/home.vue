@@ -84,8 +84,12 @@
           /></v-avatar>
       </v-btn>
     </v-app-bar>
- <v-content>
+<v-content>
       <v-container fluid>
+        <v-row
+          align="center"
+          justify="center"
+        >
        <h1 class="titleh1">Você tem {{cards.length}} Ticket</h1>
 
       <v-row dense>
@@ -100,34 +104,27 @@
         > -->
 
        <cardMonitor/>
-	
-  <div v-if="condition">
-  </div>
-  <div v-else>
-  </div>
-	
         
         </v-col>
-      </v-row>
+
  
+      </v-row>
 
-   
-     
-      </v-container>
-    </v-content>
 
-      <v-row justify="center">
-        
-    <v-dialog v-model="dialog" persistent max-width="600px">
-      <template v-slot:activator="{ on }">
-        <v-btn  class="btnadd"
+ 
+    </v-row>
+
+  <v-btn  class="btnadd"
                 dark
                 absolute
                 right
                 fab
-                v-on="on" > <v-icon>mdi-plus</v-icon></v-btn>
-      </template>
-      <v-card style="border-radius:12px;">
+                @click="dialog = true" > <v-icon>mdi-plus</v-icon></v-btn>
+
+
+                <v-row justify="center">
+    <v-dialog v-model="dialog" persistent max-width="600px">
+      <v-card>
         <v-card-title>
           <span class="headline">User Profile</span>
         </v-card-title>
@@ -166,7 +163,6 @@
                   :items="['Skiing', 'Ice hockey', 'Soccer', 'Basketball', 'Hockey', 'Reading', 'Writing', 'Coding', 'Basejump']"
                   label="Interests"
                   multiple
-                  v-model="interests"
                 ></v-autocomplete>
               </v-col>
             </v-row>
@@ -176,11 +172,21 @@
         <v-card-actions>
           <v-spacer></v-spacer>
           <v-btn color="blue darken-1" text @click="dialog = false">Close</v-btn>
-          <v-btn color="blue darken-1" text >Save</v-btn>
+          <v-btn color="blue darken-1" text @click="dialog = false">Save</v-btn>
         </v-card-actions>
       </v-card>
     </v-dialog>
   </v-row>
+    
+      </v-container>
+    </v-content>
+      <v-footer
+      :inset="true"
+      app
+    >
+    
+      <span class="px-4">&copy; {{ new Date().getFullYear() }}</span>
+    </v-footer>
 
 
       
