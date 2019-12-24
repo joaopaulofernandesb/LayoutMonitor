@@ -14,9 +14,17 @@ export default {
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      
     ]
   },
+
+  manifest: {
+    name: 'Air Ticket Beta',
+    short_name: 'Air_Ticket_Beta',
+    lang: 'pt',
+  },
+
   /*
   ** Customize the progress-bar color
   */
@@ -26,11 +34,14 @@ export default {
   */
   css: [
   ],
+
+  
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
   ],
+
   /*
   ** Nuxt.js dev-modules
   */
@@ -45,7 +56,7 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    ['@nuxtjs/pwa', { icon: false }],
+    ['@nuxtjs/pwa', { icon:'./static/favicon.ico' }],
   ],
   /*
   ** Axios module configuration
