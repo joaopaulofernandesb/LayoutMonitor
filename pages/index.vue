@@ -85,7 +85,7 @@
     </v-app-bar>
  <v-content>
       <v-container fluid>
-       <h1 class="titleh1">Você tem {{cards.length}} Ticket sendo Monitorado</h1>
+       <h1 class="titleh1">Você tem {{cards.length}} Ticket</h1>
 
       <v-row dense>
         <v-col
