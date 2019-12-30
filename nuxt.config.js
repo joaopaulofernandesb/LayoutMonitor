@@ -24,7 +24,7 @@ export default {
   manifest: {
     name: 'Air Ticket Beta',
     short_name: 'Air_Ticket_Beta',
-    lang: 'pt',
+    lang: 'pt-BR',
     "icons": [
       {
         "src": "./icon/icon-1x.png",
@@ -48,7 +48,7 @@ export default {
       },
      
     ],
-    "start_url": "https://airticketmonitor.netlify.com/home"
+    "start_url": "https://airticketmonitor.netlify.com/"
   },
 
 
