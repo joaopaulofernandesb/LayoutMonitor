@@ -189,6 +189,8 @@ import cardMonitor from '../components/cardMinitoramento.vue'
   }),
 
 mounted() {
+
+
       
 
     axios.get('https://api.unsplash.com/photos/?client_id=54d9ae96f2fcc6dffd217e64133a545fc383ee525452e53ac3766fe6fb129a9f')

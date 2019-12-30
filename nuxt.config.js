@@ -25,6 +25,7 @@ export default {
     name: 'Air Ticket Beta',
     short_name: 'Air_Ticket_Beta',
     lang: 'pt-BR',
+    "prefer_related_applications": true,
     "icons": [
       {
         "src": "./icon/icon-1x.png",
