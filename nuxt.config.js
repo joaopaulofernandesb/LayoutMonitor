@@ -35,10 +35,16 @@ export default {
         "sizes": "96x96"
       },
       {
+        "src": "5x.png",
+        "type": "image/png",
+        "sizes": "512x512 px"
+      },
+      {
         "src": "4x.png",
         "type": "image/png",
         "sizes": "192x192"
-      }
+      },
+     
     ],
     "start_url": "https://airticketmonitor.netlify.com/?pwa_launcher=true"
   },
