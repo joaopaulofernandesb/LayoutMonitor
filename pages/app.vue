@@ -59,6 +59,110 @@
     </v-sheet>
 
 
+ <v-btn  class="btnadd"
+                dark
+                absolute
+                right
+                fab
+                @click="dialog = true" > <v-icon>mdi-plus</v-icon></v-btn>
+
+
+                <v-row justify="center">
+    <v-dialog v-model="dialog" persistent max-width="600px">
+      <v-card>
+        <v-card-title>
+          <span class="headline">Busca de Passagem</span>
+        </v-card-title>
+        <v-card-text>
+          <v-container>
+            <v-row>
+              <v-col cols="12" sm="6" md="4">
+                <v-text-field label="Origen" required></v-text-field>
+              </v-col>
+              <v-col cols="12" sm="6" md="4">
+                <v-text-field label="Destino" required></v-text-field>
+              </v-col>
+              <v-col cols="12" sm="6" md="4">
+                  <v-menu
+    ref="menu"
+    v-model="menu"
+    :close-on-content-click="false"
+    transition="scale-transition"
+    offset-y
+    full-width
+    min-width="290px"
+  >
+    <template v-slot:activator="{ on }">
+      <v-text-field
+        v-model="date"
+        label="Data da Ida"
+        readonly
+        v-on="on"
+      ></v-text-field>
+    </template>
+    <v-date-picker
+      ref="picker"
+      v-model="date"
+      :max="new Date().toISOString().substr(0, 10)"
+      min="1950-01-01"
+      @change="save"
+    ></v-date-picker>
+  </v-menu>
+              </v-col>
+              
+
+
+
+
+
+ <v-col cols="12" sm="6" md="4">
+                  <v-menu
+    ref="menu"
+    v-model="dataVolta"
+    :close-on-content-click="false"
+    transition="scale-transition"
+    offset-y
+    full-width
+    min-width="290px"
+  >
+    <template v-slot:activator="{ on }">
+      <v-text-field
+        v-model="datavoltapass"
+        label="Data da Volta"
+        readonly
+        v-on="on"
+      ></v-text-field>
+    </template>
+    <v-date-picker
+      ref="picker"
+      v-model="datavoltapass"
+      :max="new Date().toISOString().substr(0, 10)"
+      min="1950-01-01"
+      @change="save"
+    ></v-date-picker>
+  </v-menu>
+              </v-col>
+
+
+
+
+
+
+
+
+
+              
+            </v-row>
+          </v-container>
+        </v-card-text>
+        <v-card-actions>
+          <v-spacer></v-spacer>
+          <v-btn color="blue darken-1" text @click="dialog = false">Close</v-btn>
+          <v-btn color="blue darken-1" text @click="dialog = false">Save</v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
+                </v-row>
 
 
 
@@ -85,7 +189,12 @@ import cardMonitor from '../components/cardMinitoramento.vue'
     items2: [
       { title: 'Travis Howard', avatar: 'https://cdn.vuetifyjs.com/images/lists/5.jpg' },
     ],
-    cards:'10'
+    cards:'10',
+    dialog:'',
+     date: null,
+      menu: false,
+      dataVolta:false,
+      datavoltapass:null
   }),
 
 mounted() {
@@ -108,21 +217,21 @@ mounted() {
     
   },
 
+   watch: {
+      menu (val) {
+        val && setTimeout(() => (this.$refs.picker.activePicker = 'Month'))
+      },
+    },
+    methods: {
+      save (date) {
+        this.$refs.menu.save(date)
+      },
+    },
+
   
     
 }
 </script>
 <style>
-.backgoundbar{
-      	background: -webkit-linear-gradient(to right, #1488CC, #2B32B2);
-	background: linear-gradient(to right, #1488CC, #2B32B2);
-}
-.slidecard{
-    background-color: rgba(20, 137, 204, 0);
-    box-shadow: none;
-}
-.theme--light.v-application {
-    background: white !important;
-   
-}
+
 </style>
