@@ -8,13 +8,14 @@
 
     
 
-                    <v-list dense>
-        <v-list-item link>
+                    <v-list dense shaped>
+        <v-list-item link >
           <v-list-item-action>
             <v-icon>mdi-home</v-icon>
           </v-list-item-action>
           <v-list-item-content>
             <v-list-item-title>Home</v-list-item-title>
+            
           </v-list-item-content>
         </v-list-item>
         <v-list-item link >
@@ -31,6 +32,15 @@
           </v-list-item-action>
           <v-list-item-content>
             <v-list-item-title>Sair</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+
+         <v-list-item link to="/app" >
+          <v-list-item-action>
+            <v-icon>mdi-contact-mail</v-icon>
+          </v-list-item-action>
+          <v-list-item-content>
+            <v-list-item-title>Demo App</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
       
@@ -272,6 +282,7 @@ import cardMonitor from '../components/cardMinitoramento.vue'
     .then(response => {
 
         this.cards = response.data
+        localStorage.setItem('contM',this.cards)
         
 
 
@@ -323,6 +334,8 @@ computed: {
 }
 .btnadd{
  	background: -webkit-linear-gradient(to right, #1488CC, #1488CC);
-	background: linear-gradient(to right, #1488CC, #1488CC);
+  background: linear-gradient(to right, #1488CC, #1488CC);
+  
 }
+
 </style>
