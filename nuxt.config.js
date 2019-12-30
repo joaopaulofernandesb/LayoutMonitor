@@ -46,7 +46,7 @@ export default {
       },
      
     ],
-    "start_url": "https://airticketmonitor.netlify.com/?pwa_launcher=true"
+    "start_url": "https://airticketmonitor.netlify.com"
   },
 
 
