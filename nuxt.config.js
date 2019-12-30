@@ -30,8 +30,8 @@ export default {
         "sizes": "48x48"
       },
       {
-        "src": "icon-2x.png",
-        "type": "image/png",
+        "src": "icon-2x.svg",
+        "type": "image/svg",
         "sizes": "96x96"
       },
       {
@@ -46,7 +46,7 @@ export default {
       },
      
     ],
-    "start_url": "https://airticketmonitor.netlify.com"
+    "start_url": "https://airticketmonitor.netlify.com/?pwa_launcher=true"
   },
 
 
