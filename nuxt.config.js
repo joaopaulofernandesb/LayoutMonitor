@@ -25,18 +25,10 @@ export default {
     name: 'Air Ticket Beta',
     short_name: 'Monitor de Passagens',
     lang: 'pt',
-    display: "standalone",
-    "related_applications": [{
-      "platform": "web"
-    }, {
-      "platform": "play",
-      "url": "https://play.google.com/store/apps/details?id=cheeaun.hackerweb"
-    }],
-    
     "icons": [
       {
-        "src": "./icon/icon-1x.png",
-        "type": "image/png",
+        "src": "./icon/4x.svg",
+        "type": "image/svg",
         "sizes": "48x48"
       },
       {
@@ -45,8 +37,8 @@ export default {
         "sizes": "96x96"
       },
       {
-        "src": "./icon/5x.png",
-        "type": "image/png",
+        "src": "./icon/4x.svg",
+        "type": "image/svg",
         "sizes": "512x512 px"
       },
       {
@@ -56,7 +48,8 @@ export default {
       },
      
     ],
-    "start_url": "https://airticketmonitor.netlify.com/?pwa_launcher=true"
+    "start_url": "https://airticketmonitor.netlify.com/?pwa_launcher=true",
+    display: "standalone",
   },
 
 
