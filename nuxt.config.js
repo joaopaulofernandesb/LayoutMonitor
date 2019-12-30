@@ -48,7 +48,7 @@ export default {
       },
      
     ],
-    "start_url": "https://airticketmonitor.netlify.com/app"
+    "start_url": "https://airticketmonitor.netlify.com"
   },
 
 

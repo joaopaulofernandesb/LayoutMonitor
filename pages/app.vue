@@ -45,7 +45,7 @@
         <v-col
           v-for="card in cards"
           :key="card.title"
-          :cols="flex" 
+          
         >
 
        <cardMonitor/>
@@ -194,7 +194,8 @@ import cardMonitor from '../components/cardMinitoramento.vue'
      date: null,
       menu: false,
       dataVolta:false,
-      datavoltapass:null
+      datavoltapass:null,
+      model:''
   }),
 
 mounted() {
