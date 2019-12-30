@@ -1,5 +1,7 @@
 import colors from 'vuetify/es5/util/colors'
 
+
+
 export default {
   mode: 'universal',
   /*
@@ -21,32 +23,32 @@ export default {
 
   manifest: {
     name: 'Air Ticket Beta',
-    short_name: 'Air_Ticket_Beta',
+    short_name: 'Monitor de Passagens',
     lang: 'pt',
     "icons": [
       {
-        "src": "icon-1x.png",
+        "src": "./icon/icon-1x.png",
         "type": "image/png",
         "sizes": "48x48"
       },
       {
-        "src": "icon-2x.svg",
+        "src": "./icon/icon-2x.svg",
         "type": "image/svg",
         "sizes": "96x96"
       },
       {
-        "src": "5x.png",
+        "src": "./icon/5x.png",
         "type": "image/png",
         "sizes": "512x512 px"
       },
       {
-        "src": "4x.png",
+        "src": "./icon/4x.png",
         "type": "image/png",
         "sizes": "192x192"
       },
      
     ],
-    "start_url": "https://airticketmonitor.netlify.com/?pwa_launcher=true"
+    "start_url": "https://airticketmonitor.netlify.com/app"
   },
 
 
