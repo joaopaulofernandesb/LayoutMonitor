@@ -23,12 +23,12 @@ export default {
 
   manifest: {
     name: 'Air Ticket Beta',
-    short_name: 'Monitor de Passagens',
+    short_name: 'Air_Ticket_Beta',
     lang: 'pt',
     "icons": [
       {
-        "src": "./icon/4x.svg",
-        "type": "image/svg",
+        "src": "./icon/icon-1x.png",
+        "type": "image/png",
         "sizes": "48x48"
       },
       {
@@ -37,19 +37,18 @@ export default {
         "sizes": "96x96"
       },
       {
-        "src": "./icon/4x.svg",
-        "type": "image/svg",
+        "src": "./icon/5x.png",
+        "type": "image/png",
         "sizes": "512x512 px"
       },
       {
-        "src": "./icon/4x.svg",
-        "type": "image/svg",
+        "src": "./icon/4x.png",
+        "type": "image/png",
         "sizes": "192x192"
       },
      
     ],
-    "start_url": "https://airticketmonitor.netlify.com/?pwa_launcher=true",
-    display: "standalone",
+    "start_url": "https://airticketmonitor.netlify.com/home"
   },
 
 
