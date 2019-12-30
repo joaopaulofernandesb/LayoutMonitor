@@ -37,6 +37,11 @@ export default {
         "sizes": "96x96"
       },
       {
+        "src": "./icon/apple-touch-icon.png",
+        "type": "image/png",
+        "sizes": "180x180"
+      },
+      {
         "src": "./icon/5x.png",
         "type": "image/png",
         "sizes": "512x512 px"
