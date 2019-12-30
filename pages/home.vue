@@ -222,7 +222,7 @@ import cardMonitor from '../components/cardMinitoramento.vue'
       statusM:'',
       cards:'',
       showNav:null,
-      statusbtndark:false,
+      statusbtndark:true,
       dialog: false,
       drawer: false,
       direction: 'top',

@@ -3,7 +3,7 @@
    <v-app id="inspire">
     <v-card
     class="slidecard"
-    style="background-color: rgba(20, 137, 204, 0);"
+
     >
       <v-toolbar
         color="deep-purple accent-4"
@@ -26,13 +26,12 @@
        <v-sheet
 
      
-      style="background-color: rgba(20, 137, 204, 0);"
+     
     
     >
       <v-slide-group
         v-model="model"
 
-        style="background-color: rgba(20, 137, 204, 0);"
       >
         <v-slide-item
           v-slot:default="{ active, toggle }"
@@ -122,7 +121,7 @@
     :close-on-content-click="false"
     transition="scale-transition"
     offset-y
-    full-width
+   
     min-width="290px"
   >
     <template v-slot:activator="{ on }">
@@ -180,16 +179,7 @@ import cardMonitor from '../components/cardMinitoramento.vue'
       source: String,
     },
     data: () => ({
-    items: [
-      { active: true, title: 'Jason Oner', avatar: 'https://cdn.vuetifyjs.com/images/lists/1.jpg' },
-      { active: true, title: 'Ranee Carlson', avatar: 'https://cdn.vuetifyjs.com/images/lists/2.jpg' },
-      { title: 'Cindy Baker', avatar: 'https://cdn.vuetifyjs.com/images/lists/3.jpg' },
-      { title: 'Ali Connors', avatar: 'https://cdn.vuetifyjs.com/images/lists/4.jpg' },
-    ],
-    items2: [
-      { title: 'Travis Howard', avatar: 'https://cdn.vuetifyjs.com/images/lists/5.jpg' },
-    ],
-    cards:'10',
+    cards:'',
     dialog:'',
      date: null,
       menu: false,
