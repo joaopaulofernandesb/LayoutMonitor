@@ -23,7 +23,27 @@ export default {
     name: 'Air Ticket Beta',
     short_name: 'Air_Ticket_Beta',
     lang: 'pt',
+    "icons": [
+      {
+        "src": "icon-1x.png",
+        "type": "image/png",
+        "sizes": "48x48"
+      },
+      {
+        "src": "icon-2x.png",
+        "type": "image/png",
+        "sizes": "96x96"
+      },
+      {
+        "src": "4x.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      }
+    ],
+    "start_url": "https://airticketmonitor.netlify.com/?pwa_launcher=true"
   },
+
+
 
   /*
   ** Customize the progress-bar color
@@ -56,7 +76,7 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    ['@nuxtjs/pwa', { icon:'./static/favicon.ico' }],
+    '@nuxtjs/pwa',
   ],
   /*
   ** Axios module configuration
