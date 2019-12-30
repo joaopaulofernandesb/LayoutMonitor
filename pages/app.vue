@@ -8,12 +8,12 @@
       <v-toolbar
         color="deep-purple accent-4"
         dark
-        style=" border-radius: 0px 0px 40px 40px; height:160px;"
+        style=" border-radius: 0px 0px 0px 40px; height:250px;"
         class="backgoundbar"
       >
         <v-app-bar-nav-icon ></v-app-bar-nav-icon>
   
-        <v-toolbar-title><br><br><br>Bem Vindo! Usuário<br>Você tem {{cards.length}} Ticket Ativos</v-toolbar-title>
+        <v-toolbar-title><br><br><br><br><br><br><br>Bem Vindo! Usuário<br>Você tem {{cards.length}} Ticket Ativos</v-toolbar-title>
   
         <v-spacer></v-spacer>
   
