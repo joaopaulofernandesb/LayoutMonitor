@@ -23,38 +23,84 @@ export default {
 
   manifest: {
     name: 'Air Ticket Beta',
-    short_name: 'Air_Ticket_Beta',
+    short_name: 'Air Ticket Beta',
     lang: 'pt-BR',
-    "prefer_related_applications": true,
-    "icons": [
-      {
-        "src": "./icon/icon-1x.png",
-        "type": "image/png",
-        "sizes": "48x48"
-      },
-      {
-        "src": "./icon/icon-2x.svg",
-        "type": "image/svg",
-        "sizes": "96x96"
-      },
-      {
-        "src": "./icon/apple-touch-icon.png",
-        "type": "image/png",
-        "sizes": "180x180"
-      },
-      {
-        "src": "./icon/5x.png",
-        "type": "image/png",
-        "sizes": "512x512 px"
-      },
-      {
-        "src": "./icon/4x.png",
-        "type": "image/png",
-        "sizes": "192x192"
-      },
+    start_url: "/",
+    display: "standalone",
+  orientation: "portrait",
+  ackground_color: "#fff",
+  theme_color: "#fff",
+    // "icons": [
+    //   {
+    //     "src": "./icon/icon-1x.png",
+    //     "type": "image/png",
+    //     "sizes": "48x48"
+    //   },
+    //   {
+    //     "src": "./icon/icon-2x.svg",
+    //     "type": "image/svg",
+    //     "sizes": "96x96"
+    //   },
+    //   {
+    //     "src": "./icon/apple-touch-icon.png",
+    //     "type": "image/png",
+    //     "sizes": "180x180"
+    //   },
+    //   {
+    //     "src": "./icon/5x.png",
+    //     "type": "image/png",
+    //     "sizes": "512x512 px"
+    //   },
+    //   {
+    //     "src": "./icon/4x.png",
+    //     "type": "image/png",
+    //     "sizes": "192x192"
+    //   },
      
-    ],
-    "start_url": "https://airticketmonitor.netlify.com/"
+    // ],
+    icons: [
+      {
+      src: "./icons/icon-72x72.png",
+      sizes: "72x72",
+      type: "image/png"
+      },
+      {
+      src: "./icons/icon-96x96.png",
+      sizes: "96x96",
+      type: "image/png"
+      },
+      {
+      src: "./icons/icon-128x128.png",
+      sizes: "128x128",
+      type: "image/png"
+      },
+      {
+      src: "./icons/icon-144x144.png",
+      sizes: "144x144",
+      type: "image/png"
+      },
+      {
+      src: "./icons/icon-152x152.png",
+      sizes: "152x152",
+      type: "image/png"
+      },
+      {
+      src: "./icons/icon-192x192.png",
+      sizes: "192x192",
+      type: "image/png"
+      },
+      {
+      src: "./icons/icon-384x384.png",
+      sizes: "384x384",
+      type: "image/png"
+      },
+      {
+      src: "./icons/icon-512x512.png",
+      sizes: "512x512",
+      type: "image/png"
+      }
+      ],
+    splash_pages: null
   },
 
 
