@@ -6,17 +6,18 @@
       v-model="snackbar"
       :timeout="timeout"
 	   :top="y === 'top'"
+	   class="notificastyle"
 	 
     >
       {{ text }}
-      <!-- <v-btn
+      <v-btn
         color="blue"
         text
 		
         @click="snackbar = false"
       >
-        Close
-      </v-btn> -->
+      ok
+      </v-btn>
     </v-snackbar>
   </div>
 	
@@ -338,5 +339,10 @@ box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 			}
 		}
 	}
+}
+.notificastyle{
+	background-color:white !important;
+	opacity: 0.9 !important;
+	border-radius: 10px;
 }
 </style>
