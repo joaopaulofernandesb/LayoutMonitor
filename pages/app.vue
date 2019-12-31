@@ -1,6 +1,9 @@
 <template>
   
    <v-app id="inspire">
+
+    
+     
     <v-card
     class="slidecard"
 
@@ -11,18 +14,19 @@
         style=" border-radius: 0px 0px 0px 40px; height:250px;"
         class="backgoundbar"
       >
-        <v-app-bar-nav-icon ></v-app-bar-nav-icon>
+        <v-app-bar-nav-icon  @click.stop="sheet = !sheet"></v-app-bar-nav-icon>
   
         <v-toolbar-title><br><br><br><br><br><br><br>Bem Vindo! Usuário<br>Você tem {{cards.length}} Ticket Ativos</v-toolbar-title>
   
         <v-spacer></v-spacer>
   
-        <v-btn icon>
+        <v-btn icon >
           <v-icon>mdi-magnify</v-icon>
         </v-btn>
       </v-toolbar>
-  
-    
+
+
+     
        <v-sheet
 
      
@@ -56,6 +60,31 @@
         </v-slide-item>
       </v-slide-group>
     </v-sheet>
+
+ <div class="text-center">
+    <v-bottom-sheet v-model="sheet">
+      <template v-slot:activator="{ on }">
+       
+      </template>
+      <v-list class="menustyle">
+        <v-subheader>Opções</v-subheader>
+        <v-list-item
+          v-for="tile in tiles"
+          :key="tile.title"
+          @click="sheet = false"
+          :to="tile.to"
+        >
+          <v-list-item-avatar>
+            <v-avatar size="50px" tile>
+             <v-icon :color="tile.color">{{tile.img}}</v-icon>
+            </v-avatar>
+          </v-list-item-avatar>
+          <v-list-item-title>{{ tile.title }}</v-list-item-title>
+        </v-list-item>
+      </v-list>
+    </v-bottom-sheet>
+  </div>
+
 
 
  <v-btn  class="btnadd"
@@ -186,50 +215,18 @@ import cardMonitor from '../components/cardMinitoramento.vue'
       dataVolta:false,
       datavoltapass:null,
       model:'',
-      beforeinstallprompt:null
+      beforeinstallprompt:null,
+      drawer: false,
+       rating: 3,
+       sheet: false,
+      tiles: [
+        { img: 'mdi-home', title: 'Home', to:'/home' ,color:'#000' },
+        { img: 'mdi-account-circle', title: 'Perfil', to:'#' ,color:'#000' },
+        {img:'mdi-exit-to-app', title:'Sair', to:'/' ,color:'#000'}
+      ],
   }),
 
 mounted() {
-
-  
-
-    let deferredPrompt;
-
-window.addEventListener('beforeinstallprompt', (e) => {
-      e.preventDefault();
-  // Stash the event so it can be triggered later.
-  deferredPrompt = e;
-  // Update UI notify the user they can add to home screen
-  showInstallPromotion();
-  btnAdd.addEventListener('click', (e) => {
-  // hide our user interface that shows our A2HS button
-  btnAdd.style.display = 'none';
-  // Show the prompt
-  deferredPrompt.prompt();
-  // Wait for the user to respond to the prompt
-  deferredPrompt.userChoice
-    .then((choiceResult) => {
-      if (choiceResult.outcome === 'accepted') {
-        console.log('User accepted the A2HS prompt');
-      } else {
-        console.log('User dismissed the A2HS prompt');
-      }
-      deferredPrompt = null;
-    });
-});
-});
-
-window.addEventListener('appinstalled', (evt) => {
-  console.log('a2hs installed');
-});
-
-if (window.navigator.standalone === true) {
-  console.log('display-mode is standalone');
-}
-
-
-
-      
 
     axios.get('https://api.unsplash.com/photos/?client_id=54d9ae96f2fcc6dffd217e64133a545fc383ee525452e53ac3766fe6fb129a9f')
     .then(response => {
