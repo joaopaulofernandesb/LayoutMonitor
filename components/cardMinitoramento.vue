@@ -1,5 +1,24 @@
 <template>
 <div class="cards_wrapper" >
+			<div class="text-center">
+
+    <v-snackbar
+      v-model="snackbar"
+      :timeout="timeout"
+	   :top="y === 'top'"
+	 
+    >
+      {{ text }}
+      <!-- <v-btn
+        color="blue"
+        text
+		
+        @click="snackbar = false"
+      >
+        Close
+      </v-btn> -->
+    </v-snackbar>
+  </div>
 	
 		<div class="card">
 		
@@ -85,8 +104,11 @@
 		
 		
 		</div>
+
 		
 	</div>
+
+	
     
 </template>
 <script>
@@ -99,7 +121,12 @@ import axios from 'axios'
     },
     data: () => ({
       monitoractive:'',
-      statusM:'',
+	  statusM:'',
+	  snackbar: false,
+      text: '',
+	  timeout: 2000,
+	    x: null,
+        y: 'top',
      
     }),
 
@@ -108,11 +135,15 @@ import axios from 'axios'
     
     monitorar: function(index){
       if(index === true){
-      this.statusM = '#25F230'
+	  this.statusM = '#25F230'
+	  this.snackbar = true
+	  this.text = 'Monitoramento Ativo'
     }
 
       if(index === false){
-        this.statusM = 'red'
+		this.statusM = 'red'
+		this.snackbar = true
+	  	this.text = 'Monitoramento Desativado'
       }
 
     
